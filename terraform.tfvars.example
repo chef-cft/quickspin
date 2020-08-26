@@ -41,10 +41,10 @@ domain = "quickbad.com"
 # a2_license = ""
 
 # Harvest .pem key file
-harvest_key = true
+harvest_key = false
 
 # Update knife_override.rb
-update_knife_override = true
+update_knife_override = false
 
 # Provision Habitat BLDR server
 provision_bldr = false
