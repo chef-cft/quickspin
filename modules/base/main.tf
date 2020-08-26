@@ -117,7 +117,7 @@ resource "null_resource" "chef_preparation" {
       host        ="${aws_instance.chef_server.public_ip}"
       user        = "centos"
       agent       = true
-      #private_key = "${file("${var.instance_key}")}"
+      private_key = "${file("${var.instance_key}")}"
       }
 
     # Write .chef/dna.json for chef-solo run
@@ -181,7 +181,7 @@ resource "null_resource" "deposit_reporting_token" {
     host        ="${aws_instance.chef_server.public_ip}"
     user        = "centos"
     agent       = true
-    #private_key = "${file("${var.instance_key}")}"
+    private_key = "${file("${var.instance_key}")}"
     }
 
     # Deposit reporting token
@@ -214,7 +214,7 @@ resource "null_resource" "deposit_reporting_token" {
       host        ="${aws_instance.chef_server.public_ip}"
       user        = "centos"
       agent       = true
-      #private_key = "${file("${var.instance_key}")}"
+      private_key = "${file("${var.instance_key}")}"
       }
 
       # Harvest keys
@@ -234,7 +234,7 @@ resource "null_resource" "deposit_reporting_token" {
       host        ="${aws_instance.chef_server.public_ip}"
       user        = "centos"
       agent       = true
-      #private_key = "${file("${var.instance_key}")}"
+      private_key = "${file("${var.instance_key}")}"
       }
 
       # Update knife-override.rb, and fetch the Chef server's self signed SSL certificate
@@ -339,7 +339,7 @@ resource "null_resource" "a2_preparation" {
       host        ="${aws_instance.a2_server.public_ip}"
       user        = "centos"
       agent       = true
-      #private_key = "${file("${var.instance_key}")}"
+      private_key = "${file("${var.instance_key}")}"
       }
 
     # Write /tmp/a2_license
@@ -415,7 +415,7 @@ resource "null_resource" "harvest_reporting_token" {
       host        ="${aws_instance.a2_server.public_ip}"
       user        = "centos"
       agent       = true
-      #private_key = "${file("${var.instance_key}")}"
+      private_key = "${file("${var.instance_key}")}"
       }
 
       # Copy back reporting token
@@ -506,7 +506,7 @@ resource "null_resource" "bldr_preparation" {
       host        ="${aws_instance.bldr_server[count.index].public_ip}"
       user        = "centos"
       agent       = true
-      #private_key = "${file("${var.instance_key}")}"
+      private_key = "${file("${var.instance_key}")}"
       }
 
     # Write bldr.env so that bldr can be installed
@@ -548,7 +548,7 @@ resource "null_resource" "bldr_preparation_2" {
       host        ="${aws_instance.bldr_server[count.index].public_ip}"
       user        = "centos"
       agent       = true
-      #private_key = "${file("${var.instance_key}")}"
+      private_key = "${file("${var.instance_key}")}"
       }
 
   # Harvest A2 SSL cert and restart Bldr

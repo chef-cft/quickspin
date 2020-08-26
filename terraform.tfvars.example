@@ -20,6 +20,7 @@ last_name = "User"
 username = "joe"
 
 # Define Key Name - This is the name of your key at AWS.
+# If using key name - Be sure to uncomment all the private_key variables in main.tf
 key_name = "joe_users_key"
 
 # Instance Key - The local copy of your key file.  This defaults to ~/.ssh/id_rsa if left unset.
@@ -30,6 +31,10 @@ centos_sample_node_count = 0
 ubuntu_sample_node_count = 0
 rhel_sample_node_count = 0
 sles_sample_node_count = 0
+
+# Update domain for DNS to your own domain e.g. chef-demo.com
+
+domain = "quickbad.com"
 
 # Define A2 License
 # Only place a valid A2 license in this space.  If you don't have one or don't want to use it, leave this commented out.
