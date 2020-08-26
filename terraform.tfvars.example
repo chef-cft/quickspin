@@ -34,7 +34,7 @@ sles_sample_node_count = 0
 
 # Update domain for DNS to your own domain e.g. chef-demo.com
 
-domain = "quickbad.com"
+domain = "chef-demo.com"
 
 # Define A2 License
 # Only place a valid A2 license in this space.  If you don't have one or don't want to use it, leave this commented out.
